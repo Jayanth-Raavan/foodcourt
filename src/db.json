@@ -1,0 +1,130 @@
+{
+  "veg": [
+   {
+    "itemName":"Hara bhara kabab",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2017/11/hara-bhara-kabab-recipe-13.jpg",
+    "price":120,
+    "itemId":1
+   },
+   {
+    "itemName":"Veg Kofta",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2017/10/vegetable-kofta-recipe-6.jpg",
+    "price":130,
+    "itemId":2
+   },
+   {
+    "itemName":"Paneer Manchurian Dry",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2017/09/paneer-manchurian-dry-recipe-11.jpg",
+    "price":150,
+    "itemId":3
+   },
+   {
+    "itemName":"Veg Momos",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2017/04/veg-momos-recipe-13.jpg",
+    "price": 179,
+    "itemId":4
+   },
+   {
+    "itemName":"Spring Rolls",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2017/04/spring-rolls-recipe-14.jpg",
+    "price": 156,
+    "itemId":5
+   },
+   {
+    "itemName":"Idly Fry",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2017/04/fried-idli-recipe-5.jpg",
+    "price": 150,
+    "itemId":6
+   },
+   {
+    "itemName":"Palak Chaat",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2016/05/palak-pakora-chaat-4.jpg",
+    "price": 180,
+    "itemId":7
+   },
+   {
+    "itemName":"Kala Chana Chaat",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2015/05/kala-chana-chaat-recipe-5.jpg",
+    "price": 220,
+    "itemId":8
+   },
+   {
+    "itemName":"Spring Onion Pakora",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2014/04/spring-onion-pakora-recipe-8.jpg",
+    "price": 80,
+    "itemId":9
+   },
+   {
+    "itemName":"Oats Muthia",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2014/03/methi-oats-muthia-recipe-2.jpg",
+    "price": 150,
+    "itemId":10
+   },
+   {
+    "itemName":"Cabbage Pakoda",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2013/12/Cabbage-pakoda-recipe.jpg",
+    "price": 150,
+    "itemId":11
+   },
+   {
+    "itemName":"Masala Boondhi CHaat",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2015/05/masala-boondi-recipe-3.jpg",
+    "price": 110,
+    "itemId":12
+   },
+   {
+    "itemName":"Khandvi",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2013/07/Gujarati-Khandvi-Recipe.jpg",
+    "price": 130,
+    "itemId":13
+   },
+   {
+    "itemName":"BREAD vada",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2014/08/bread-vada-recipe-5.jpg",
+    "price": 150,
+    "itemId":14
+   },
+   {
+    "itemName":"Aloo Tikki",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2014/07/Aloo-tikki-recipe-6.jpg",
+    "price": 90,
+    "itemId":15
+   },
+   {
+    "itemName":"Pani Puri Recipe",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2022/03/pani-puri-recipe-2.jpg",
+    "price": 50,
+    "itemId":16
+   },
+   {
+    "itemName":"Masala Papad",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2015/07/masala-papad-1.jpg",
+    "price": 100,
+    "itemId":17
+   },
+   {
+    "itemName":"Sweet Corn Chaat",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2016/01/corn-chaat-recipe-1.jpg",
+    "price":60,
+    "itemId":18
+   },
+   {
+    "itemName":"Paneer Tikka",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2020/09/paneer-tikka-recipe-2.jpg",
+    "price":180,
+    "itemId":19
+   },
+   {
+    "itemName":"Methi Muthia",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2020/11/methi-muthia-recipe-1.jpg",
+    "price":200,
+    "itemId":20
+   },
+   {
+    "itemName":"Veg Kabab",
+    "imgURL":"https://www.spiceupthecurry.com/wp-content/uploads/2018/06/veg-seekh-kabab-recipe-14.jpg",
+    "price":180,
+    "itemId":21
+   }
+  ]
+}
