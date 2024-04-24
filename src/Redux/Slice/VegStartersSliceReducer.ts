@@ -6,7 +6,7 @@ const initialState = {
     data: null,
     isError: false
   }
-  export const VegSliceReducer = createSlice({
+  export const VegStartersSliceReducer = createSlice({
     name: 'veg_items',
     initialState,
     reducers: {},
@@ -22,9 +22,9 @@ const initialState = {
         state.isLoading = false;
         state.isError = true;
         console.log("Error", action.payload)
-      })
+      });
     }),
   });
 
-  export default VegSliceReducer.reducer;
+  export default VegStartersSliceReducer.reducer;
   

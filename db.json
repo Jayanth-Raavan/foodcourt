@@ -1,0 +1,352 @@
+{
+  "starters_veg": [
+    {
+      "itemName": "Hara bhara kabab",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/11/hara-bhara-kabab-recipe-13.jpg",
+      "price": 120,
+      "itemId": 1,
+      "id": "819a"
+    },
+    {
+      "itemName": "Veg Kofta",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/10/vegetable-kofta-recipe-6.jpg",
+      "price": 130,
+      "itemId": 2,
+      "id": "014b"
+    },
+    {
+      "itemName": "Paneer Manchurian Dry",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/09/paneer-manchurian-dry-recipe-11.jpg",
+      "price": 150,
+      "itemId": 3,
+      "id": "5a4b"
+    },
+    {
+      "itemName": "Veg Momos",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/04/veg-momos-recipe-13.jpg",
+      "price": 179,
+      "itemId": 4,
+      "id": "6efc"
+    },
+    {
+      "itemName": "Spring Rolls",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/04/spring-rolls-recipe-14.jpg",
+      "price": 156,
+      "itemId": 5,
+      "id": "28d9"
+    },
+    {
+      "itemName": "Idly Fry",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/04/fried-idli-recipe-5.jpg",
+      "price": 150,
+      "itemId": 6,
+      "id": "8dd4"
+    },
+    {
+      "itemName": "Palak Chaat",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2016/05/palak-pakora-chaat-4.jpg",
+      "price": 180,
+      "itemId": 7,
+      "id": "8e97"
+    },
+    {
+      "itemName": "Kala Chana Chaat",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2015/05/kala-chana-chaat-recipe-5.jpg",
+      "price": 220,
+      "itemId": 8,
+      "id": "58ed"
+    },
+    {
+      "itemName": "Spring Onion Pakora",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2014/04/spring-onion-pakora-recipe-8.jpg",
+      "price": 80,
+      "itemId": 9,
+      "id": "3d90"
+    },
+    {
+      "itemName": "Oats Muthia",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2014/03/methi-oats-muthia-recipe-2.jpg",
+      "price": 150,
+      "itemId": 10,
+      "id": "e79e"
+    },
+    {
+      "itemName": "Cabbage Pakoda",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2013/12/Cabbage-pakoda-recipe.jpg",
+      "price": 150,
+      "itemId": 11,
+      "id": "0b86"
+    },
+    {
+      "itemName": "Masala Boondhi CHaat",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2015/05/masala-boondi-recipe-3.jpg",
+      "price": 110,
+      "itemId": 12,
+      "id": "ddb0"
+    },
+    {
+      "itemName": "Khandvi",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2013/07/Gujarati-Khandvi-Recipe.jpg",
+      "price": 130,
+      "itemId": 13,
+      "id": "919b"
+    },
+    {
+      "itemName": "BREAD vada",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2014/08/bread-vada-recipe-5.jpg",
+      "price": 150,
+      "itemId": 14,
+      "id": "05f0"
+    },
+    {
+      "itemName": "Aloo Tikki",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2014/07/Aloo-tikki-recipe-6.jpg",
+      "price": 90,
+      "itemId": 15,
+      "id": "66cf"
+    },
+    {
+      "itemName": "Pani Puri Recipe",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2022/03/pani-puri-recipe-2.jpg",
+      "price": 50,
+      "itemId": 16,
+      "id": "0c73"
+    },
+    {
+      "itemName": "Masala Papad",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2015/07/masala-papad-1.jpg",
+      "price": 100,
+      "itemId": 17,
+      "id": "17e9"
+    },
+    {
+      "itemName": "Sweet Corn Chaat",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2016/01/corn-chaat-recipe-1.jpg",
+      "price": 60,
+      "itemId": 18,
+      "id": "4df4"
+    },
+    {
+      "itemName": "Paneer Tikka",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2020/09/paneer-tikka-recipe-2.jpg",
+      "price": 180,
+      "itemId": 19,
+      "id": "f886"
+    },
+    {
+      "itemName": "Methi Muthia",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2020/11/methi-muthia-recipe-1.jpg",
+      "price": 200,
+      "itemId": 20,
+      "id": "0e01"
+    },
+    {
+      "itemName": "Veg Kabab",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2018/06/veg-seekh-kabab-recipe-14.jpg",
+      "price": 180,
+      "itemId": 21,
+      "id": "8de2"
+    }
+  ],
+  "starters_nonVeg": [
+    {
+      "itemName": "Indian Chicken Keema Sliders Recipe",
+      "imgURL": "https://www.archanaskitchen.com/images/archanaskitchen/1-Author/foodcoworg-gmail.com/Indian_Chicken_Keema_Sliders_1600.jpg",
+      "price": 200,
+      "itemId": 1,
+      "id": "d48b"
+    },
+    {
+      "itemName": "Prawn Masala Kozhukattai Recipe - Prawn Masala Dumplings",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/naseerawazir-gmail.com/Prawn_masala_balls_200x160.jpg",
+      "price": 149,
+      "itemId": 2,
+      "id": "ff19"
+    },
+    {
+      "itemName": "Delicious Butter Chicken Pani Puri Recipe",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/sneha-archanaskitchen.com/Butter_Chicken_Pani_Puri__Recipe_200x160.jpg",
+      "price": 230,
+      "itemId": 3,
+      "id": "d506"
+    },
+    {
+      "itemName": "Mutton Galouti Kebab Recipe",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/ruby_pathak-yahoo.com/Mutton_Galouti_Kabab_200x160.jpg",
+      "price": 250,
+      "itemId": 4,
+      "id": "1dd6"
+    },
+    {
+      "itemName": "Macher Chop Recipe (Bengali Style Fish Croquettes)",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/pal.rini1-gmail.com/Macher_Chop_or_Bengali_Style_Fish_Croquettes_recipe_edited_200x160.jpg",
+      "price": 320,
+      "itemId": 5,
+      "id": "4f90"
+    },
+    {
+      "itemName": "Cheesy Chicken Tikka Recipe",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/pal.rini1-gmail.com/Cheesy_Chicken_Tikka_recipe_edited_200x160.jpg",
+      "price": 269,
+      "itemId": 6,
+      "id": "c333"
+    },
+    {
+      "itemName": "Cuban Inspired Bheja Fry With Stir Fried Onion And Pepper",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/ruby_pathak-yahoo.com/_Bheja_Fry_Cuban_Style_With_Stir_Fried_Onion_and_Pepper_200x160.jpg",
+      "price": 275,
+      "itemId": 7,
+      "id": "8a81"
+    },
+    {
+      "itemName": "Jeera Miri Kolambi Recipe - Cumin & Black Pepper Prawns",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/monica_deshpande/JeereMire_Cumin_Black_pepper_Prawns_recipe1_200x160.jpg",
+      "price": 230,
+      "itemId": 8,
+      "id": "7605"
+    },
+    {
+      "itemName": "Hyderabadi Chicken Shikampuri Kebab Recipe",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/shaheen_ali/Hyderabadi_Chicken_Shikampuri_Kebab__200x160.jpg",
+      "price": 249,
+      "itemId": 9,
+      "id": "5945"
+    },
+    {
+      "itemName": "Mutton Keema Samosa Recipe-Mangsher Singara",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/Shaheen_Ali/MUTTON_KEEMA_SAMOSA_200x160.jpg",
+      "price": 200,
+      "itemId": 10,
+      "id": "1a4f"
+    },
+    {
+      "itemName": "Tandoori Mayonnaise Chicken Cigar Recipe",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/Jyothi_Rajesh/4_main_Tandoori_Mayo_Chicken_Cigars_Recipe_200x160.jpg",
+      "price": 130,
+      "itemId": 11,
+      "id": "2b3c"
+    },
+    {
+      "itemName": "Crisp Baked Tandoori Mayo Cheddar Chicken Recipe",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/10-Brands/Del_Monte_Mayo/Crisp-Baked-Tandoori-Mayo-Cheddar-Chicken1_200x160.jpg",
+      "price": 169,
+      "itemId": 12,
+      "id": "366a"
+    },
+    {
+      "itemName": "Peri Peri Fish Fingers Recipe",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/sibyl-archanaskitchen.com/Peri_Peri_Fish_Fingers_Recipe__200x160.jpg",
+      "price": 239,
+      "itemId": 13,
+      "id": "a91e"
+    },
+    {
+      "itemName": "KFC Style Crispy Chicken Popcorn Recipe",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/sneha-archanaskitchen.com/Crispy_Chicken_Popcorn__Recipe_200x160.jpg",
+      "price": 249,
+      "itemId": 14,
+      "id": "e0fe"
+    },
+    {
+      "itemName": "Chicken & Bell Pepper Skewers Recipe",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/sibyl_sunitha/Chicken__Bell_Pepper_Skewers_Recipe__200x160.jpg",
+      "price": 230,
+      "itemId": 15,
+      "id": "b7e3"
+    },
+    {
+      "itemName": "Ribs With Guava Barbecue Sauce Recipe",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/shaheen_ali/Ribs_With_Guava_BBQ_Sauce__200x160.jpg",
+      "price": 270,
+      "itemId": 16,
+      "id": "bfbc"
+    },
+    {
+      "itemName": "Stuffed Mushroom Recipe With Italian Sausage",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/sibyl-archanaskitchen.com/Peri_Peri_Fish_Fingers_Recipe__200x160.jpg",
+      "price": 220,
+      "itemId": 17,
+      "id": "82f7"
+    },
+    {
+      "itemName": "Lebanese Style Shish Tawook Recipe - Grilled Chicken Skewers",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/Jyothi_Rajesh/Shish_Tawook_200x160.jpg",
+      "price": 310,
+      "itemId": 18,
+      "id": "7a98"
+    },
+    {
+      "itemName": "Grilled Chicken Wings Recipe",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/0-Saffola_FitFoodie/9-Grilled_Chicken_Wings_Recipe_Saffola_Oats_Fit_Foodie-1_200x160.jpg",
+      "price": 279,
+      "itemId": 19,
+      "id": "7618"
+    },
+    {
+      "itemName": "Mozzarella & Parmesan Stuffed Meat Balls Recipe",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/Anuja/Mozzarella_and_Parmesan_stuffed_meat_balls_200x160.jpg",
+      "price": 169,
+      "itemId": 20,
+      "id": "36aa"
+    },
+    {
+      "itemName": "Paprika Chicken Skewers Recipe",
+      "imgURL": "https://www.archanaskitchen.com/imgcache/images/archanaskitchen/1-Author/Karthika_Gopalakrishnan/paprika-chicken-skewers-recipe_200x160.jpg",
+      "price": 279,
+      "itemId": 21,
+      "id": "9b23"
+    }
+  ],
+  "users": [
+    {
+      "id": "2a65",
+      "firstName": "Jayanth",
+      "lastName": "Raavan",
+      "email": "jayanthraavan@gmail.com",
+      "phone": "9182896193",
+      "password": "jay@55",
+      "confirmPassword": "jay@55"
+    },
+    {
+      "id": "bdf6",
+      "firstName": "Venu",
+      "lastName": "Madhav",
+      "email": "venu@gmail.com",
+      "phone": "8977898093",
+      "password": "venu@123",
+      "confirmPassword": "venu@123"
+    }
+  ],
+  "address": [
+    {
+      "id": "bb73",
+      "country": "India",
+      "fullName": "Jayanth Raavan",
+      "phoneNumber": "09182896193",
+      "flatNo": "131",
+      "street": "Dwaraka Icon",
+      "city": "Madhapur",
+      "state": "Hyderabad",
+      "pinCode": "500033",
+      "userID": "2a65"
+    }
+  ],
+  "userCart": [
+    {
+      "id": "519f",
+      "itemName": "Palak Chaat",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2016/05/palak-pakora-chaat-4.jpg",
+      "price": 180,
+      "itemId": "8e97",
+      "userId": "2a65"
+    },
+    {
+      "id": "4d84",
+      "itemName": "Palak Chaat",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2016/05/palak-pakora-chaat-4.jpg",
+      "price": 180,
+      "itemId": "8e97",
+      "userId": "2a65"
+    }
+  ]
+}

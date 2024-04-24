@@ -13,7 +13,7 @@ const Sidebar = () => {
     }
 
     return (
-        <div className={`sidebar ${showMenu ? 'show' : ''}`}>
+        <div className={` mt-3 sidebar ${showMenu ? 'show' : ''}`}>
             <button className={`btn menu-button ${showMenu ? 'shifted' : ''}`} onClick={handleMenu}>
                 <i className={`text-white bi ${showMenu ? 'bi-x-lg' : 'bi-list'}`}></i>
             </button>
