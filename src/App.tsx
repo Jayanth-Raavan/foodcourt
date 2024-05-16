@@ -21,6 +21,7 @@ import { GetUserCart } from "./Redux/Action/CartAction";
 function App() {
   const location = useLocation();
   const dispatch = useDispatch();
+  const [isLoaded, setIsLoaded] = useState(false);
   const userData: any = localStorage.getItem("User");
   const user = JSON.parse(userData);
   const getAddress = async () => {
@@ -30,18 +31,18 @@ function App() {
   };
   const getUserCart = async () => {
     const res = await dispatch(GetUserCart(user?.id));
-    console.log("user cart", res?.payload);
   }
   // setInterval(getUserCart,10000)
   useEffect(() => {
-    if (user) {
+    if (user && !isLoaded) {
       getAddress();
       getUserCart();
+      setIsLoaded(true);
     }
   }, [user]);
   return (
     <>
-      {location?.pathname !== "/login" && location?.pathname !== "/signup" && (
+      {location?.pathname !== "/login" && location?.pathname !== "/signup" && location?.pathname !=="**" && (
         <>
           <Header />
           <Sidebar />
@@ -55,12 +56,11 @@ function App() {
           <Route path="address_book" element={<AddressForm />}> </Route>
           <Route path="checkout" element={<Checkout />}> </Route>
           <Route path="payment" element={<PaymentPage />}> </Route>
-
-
         </Route>
         <Route element={<Public />}>
           <Route path="/login" element={<SignIn />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
+          <Route path="*" element={<Dashboard/>} ></Route>
         </Route>
       </Routes>
       <Footer />

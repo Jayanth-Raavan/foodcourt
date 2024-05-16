@@ -22,7 +22,6 @@ export const AddUserCart: any = createAsyncThunk("AddUserCart", async (payload:a
 //if cartData --> deletes item by item.itemId (multiple)
 export const DeleteItem: any = createAsyncThunk("DeleteItem", async (item:any) => {
   const response = await Delete("userCart", item);
-  console.log("DELETE", response)
   return response[0];
 });
 //if cartData --> deletes item by item.id (sinlgle)

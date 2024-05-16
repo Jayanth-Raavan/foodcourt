@@ -299,54 +299,79 @@
   ],
   "users": [
     {
-      "id": "2a65",
+      "id": "fe3e",
       "firstName": "Jayanth",
       "lastName": "Raavan",
       "email": "jayanthraavan@gmail.com",
       "phone": "9182896193",
-      "password": "jay@55",
-      "confirmPassword": "jay@55"
+      "password": "pass.123",
+      "confirmPassword": "pass.123"
     },
     {
-      "id": "bdf6",
-      "firstName": "Venu",
-      "lastName": "Madhav",
-      "email": "venu@gmail.com",
-      "phone": "8977898093",
-      "password": "venu@123",
-      "confirmPassword": "venu@123"
+      "id": "2a26",
+      "firstName": "Sharadha",
+      "lastName": "Raj",
+      "email": "sharadharaj@gmail.com",
+      "phone": "9848099803",
+      "password": "12345",
+      "confirmPassword": "12345"
     }
   ],
   "address": [
     {
-      "id": "bb73",
+      "id": "f7e2",
       "country": "India",
       "fullName": "Jayanth Raavan",
       "phoneNumber": "09182896193",
       "flatNo": "131",
       "street": "Dwaraka Icon",
       "city": "Madhapur",
-      "state": "Hyderabad",
+      "state": "Telangana",
       "pinCode": "500033",
-      "userID": "2a65"
+      "userID": "fe3e"
     }
   ],
   "userCart": [
     {
-      "id": "519f",
-      "itemName": "Palak Chaat",
-      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2016/05/palak-pakora-chaat-4.jpg",
-      "price": 180,
-      "itemId": "8e97",
-      "userId": "2a65"
+      "id": "a57e",
+      "itemName": "Hara bhara kabab",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/11/hara-bhara-kabab-recipe-13.jpg",
+      "price": 120,
+      "itemId": "819a",
+      "userId": "2a26"
     },
     {
-      "id": "4d84",
-      "itemName": "Palak Chaat",
-      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2016/05/palak-pakora-chaat-4.jpg",
-      "price": 180,
-      "itemId": "8e97",
-      "userId": "2a65"
+      "id": "8f18",
+      "itemName": "Veg Kofta",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/10/vegetable-kofta-recipe-6.jpg",
+      "price": 130,
+      "itemId": "014b",
+      "userId": "2a26"
+    },
+    {
+      "id": "9391",
+      "itemName": "Paneer Manchurian Dry",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/09/paneer-manchurian-dry-recipe-11.jpg",
+      "price": 150,
+      "itemId": "5a4b",
+      "userId": "2a26"
+    },
+    {
+      "id": "536b",
+      "itemName": "Veg Momos",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/04/veg-momos-recipe-13.jpg",
+      "price": 179,
+      "itemId": "6efc",
+      "userId": "fe3e"
+    },
+    {
+      "id": "536b",
+      "itemName": "Veg Momos",
+      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/04/veg-momos-recipe-13.jpg",
+      "price": 179,
+      "itemId": "6efc",
+      "userId": "fe3e",
+      "cartSize": 1
     }
   ]
 }

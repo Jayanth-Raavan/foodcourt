@@ -48,14 +48,12 @@ export const Delete = async (endpoint: any, item: any) => {
     const deletedItems = await Promise.all(deleteRequests);
     return deletedItems.filter((item) => item !== undefined);
   } catch (error) {
-    console.error("Error:", error);
     return [];
   }
 };
 
 export const Delete1Item: any = async (endpoint: any, item: any) => {
   const getRes = await axios.get(baseUrl + endpoint);
-  console.log("getALL", getRes, { item: item });
   if (getRes?.data?.length > 0) {
     const items = await getRes?.data?.filter(
       (i: any) => i?.itemName === item?.itemName

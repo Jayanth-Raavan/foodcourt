@@ -21,7 +21,6 @@ const initialState = {
       builder.addCase(GetVegItems.rejected, (state: any, action: any) => {
         state.isLoading = false;
         state.isError = true;
-        console.log("Error", action.payload)
       });
     }),
   });

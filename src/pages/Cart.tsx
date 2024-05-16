@@ -20,7 +20,6 @@ const Cart = () => {
     cart?.push(item);
   });
   const totalPrice = cart?.reduce((a: any, b: any) => a + b?.price * b?.cartSize, 0);
-  console.log("price", totalPrice);
   const dispatch = useDispatch();
   const handleCheckOut = () => {
     if (userAddress) {

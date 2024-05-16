@@ -13,13 +13,12 @@ import GPay from "../assets/google-pay-icon.webp";
 import Phonepe from "../assets/phonepe-logo-icon.webp";
 import Paytm from "../assets/paytm-icon.webp";
 import Bhim from "../assets/bhim.png";
-import { blue } from '@mui/material/colors';
 import { useLocation, useNavigate } from 'react-router';
 
 
 export default function VerticalLinearStepper() {
     const address: any = localStorage.getItem("Address");
-    const userAddress = JSON.parse(address);
+    const userAddress = address !== [] as any ? JSON.parse(address) : null;
     const [activeStep, setActiveStep] = React.useState(0);
     const [index, setIndex] = React.useState(0);
     const cartItems = useSelector((state: any) => state?.cart_reducer?.cartData);
@@ -41,11 +40,9 @@ export default function VerticalLinearStepper() {
     const [totalPrice, setTotalPrice] = React.useState(0)
     const navigate = useNavigate();
     const handleAddress = (event: React.ChangeEvent<HTMLInputElement>) => {
-        console.log("handleAddress", event?.target?.value)
         setValue((event.target as HTMLInputElement)?.value);
     }
     const handlePaymentOptions = (event: React.ChangeEvent<HTMLInputElement>) => {
-        console.log("upi", event?.target?.value)
         setPayValue((event.target as HTMLInputElement)?.value);
         setProceed(false);
         setValidateUPI(false);
@@ -74,7 +71,6 @@ export default function VerticalLinearStepper() {
         }
     };
     const handleUPI = (value: any) => {
-        console.log("Value", value)
         setProceed(true);
     }
     const names = [
@@ -96,7 +92,6 @@ export default function VerticalLinearStepper() {
     const [showValidateBtn, setShowValidateBtn] = React.useState(false);
 
     const handleBanks = (event: any) => {
-        console.log("banks", event.target.value)
         setSelectedBank(event?.target?.value);
         if (event?.target?.value) {
             setProceed(true);
@@ -123,6 +118,9 @@ export default function VerticalLinearStepper() {
     const proceedPayment = () => {
         navigate("/payment", { state: { totalPrice } })
 
+    }
+    const addAddress =()=>{
+        navigate("/address_book");
     }
     return (
         <>
@@ -182,14 +180,28 @@ export default function VerticalLinearStepper() {
                                 </FormControl>
                                 <Box sx={{ mb: 2 }}>
                                     <div>
-                                        <Button
-                                            variant="contained"
-                                            onClick={handleNext}
-                                            sx={{ mt: 1, mr: 1 }}
-                                            color={"warning"}
-                                        >
-                                            DELIVER HERE
-                                        </Button>
+                                        {userAddress && userAddress.length > 0 ?
+                                            (
+                                                <Button
+                                                    variant="contained"
+                                                    onClick={handleNext}
+                                                    sx={{ mt: 1, mr: 1 }}
+                                                    color={"warning"}
+                                                    disabled={value === 0 ? false : true}
+                                                >
+                                                    DELIVER HERE
+                                                </Button>
+                                            ) : (
+                                                <Button
+                                                    variant="contained"
+                                                    onClick={addAddress}
+                                                    sx={{ mt: 1, mr: 1 }}
+                                                    color={"warning"}
+                                                >
+                                                    Add Address
+                                                </Button>
+                                            )
+                                        }
                                     </div>
                                 </Box>
                             </StepContent>

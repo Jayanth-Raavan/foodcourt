@@ -66,9 +66,7 @@ export const CartSliceReducer = createSlice({
       state.isLoading = true;
     });
     builder.addCase(AddUserCart.fulfilled, (state: any, action: any) => {
-      console.log("action", action?.payload);
       const { itemName } = action.payload;
-      console.log("itemName", itemName);
       if (state.cartData[itemName]) {
         state.cartData[itemName].cartSize += 1;
       } else {
@@ -87,20 +85,14 @@ export const CartSliceReducer = createSlice({
       state.isLoading = true;
     });
     builder.addCase(GetUserCart.fulfilled, (state: any, action: any) => {
-      console.log(
-        "action?.payload?.length",
-        action?.payload?.length,
-        JSON.stringify(state)
-      );
+
       if (action?.payload?.length > 0) {
         const data = action?.payload;
         data?.map((item: any) => {
           const { itemName } = item;
           if (state.cartData[itemName]) {
-            console.log("IF");
             state.cartData[itemName].cartSize += 1;
           } else {
-            console.log("ELSE");
             state.cartData[itemName] = {
               ...item,
               cartSize: 1,
@@ -109,7 +101,6 @@ export const CartSliceReducer = createSlice({
           state.cartSize += 1;
         });
       }
-      console.log("cartData...", current(state.cartData));
     });
     builder.addCase(GetUserCart.rejected, (state: any) => {
       state.isError = true;
@@ -119,7 +110,6 @@ export const CartSliceReducer = createSlice({
       state.isLoading = true;
     });
     builder.addCase(DeleteItembyId.fulfilled, (state: any, action: any) => {
-      console.log("DeleteItem", action?.payload);
       const { itemName } = action.payload;
       if (state.cartData[itemName]) {
         state.cartData[itemName].cartSize -= 1;
@@ -137,7 +127,6 @@ export const CartSliceReducer = createSlice({
       state.isLoading = true;
     });
     builder.addCase(DeleteItem.fulfilled, (state: any, action: any) => {
-      console.log("Action", action.payload)
       const { itemName } = action.payload;
       if (state.cartData[itemName]) {
         state.cartSize -= state.cartData[itemName].cartSize;

@@ -30,20 +30,23 @@ const SignIn = () => {
   });
   const handleSubmit = async (values: any) => {
     const usersData = await dispatch(GetUsers());
-    usersData?.payload?.map((user: any) => {
-      if (
-        user?.email === values?.email &&
-        user?.password === values?.password
-      ) {
-        localStorage.setItem("User", JSON.stringify(user));
-        setTimeout(() => {
-          toast.success("Login Success");
-        }, 500);
-        navigate("/");
-      } else {
-        toast.error("Invalid credentials!");
-      }
-    });
+
+    if (usersData && usersData?.payload?.length > 0) {
+      usersData?.payload?.map(async (user: any) => {
+        if (
+          user?.email === values?.email &&
+          user?.password === values?.password
+        ) {
+          localStorage.setItem("User", JSON.stringify(user));
+          await toast.success("Login Success");
+          navigate("/");
+        } else {
+          toast.error("Invalid credentials!");
+        }
+      });
+    } else {
+      toast.error("No account found!!");
+    }
   };
 
   return (

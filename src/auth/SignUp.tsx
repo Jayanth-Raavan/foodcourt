@@ -15,7 +15,8 @@ import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import "./style.css";
 import { useDispatch } from "react-redux";
-import { AddUsers } from "../Redux/Action/AuthAction";
+import { AddUsers, GetUsers } from "../Redux/Action/AuthAction";
+import { ToastContainer, toast } from "react-toastify";
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -38,12 +39,28 @@ const SignUp = () => {
       .required("Confirm Password is required")
       .oneOf([Yup.ref("password")], "Passwords do not match"),
   });
-  const handleSubmit = (values: any) => {
-    dispatch(AddUsers(values));
-    navigate("/login")
-  };
+  const handleSubmit = async (values: any) => {
+    // dispatch(AddUsers(values));
+    // navigate("/login")
+    const usersData = await dispatch(GetUsers());
+    usersData?.payload?.map((user: any) => {
+      if (user?.email === values?.email && user?.phone === values?.phone) {
+        toast.error("Email and Phone already exists!")
+      } else if (user?.email === values?.email) {
+        toast.error("Email already exists!")
+      }
+      else if (user?.phone === values?.phone) {
+        toast.error("Phone number already exists!")
+      }
+      else {
+        dispatch(AddUsers(values));
+        navigate("/login");
+      }
+    });
+  }
   return (
     <>
+      <ToastContainer />
       <Box
         sx={{
           display: "flex",
@@ -109,7 +126,7 @@ const SignUp = () => {
                     <Grid item xs={12} md={6}>
                       <Field
                         as={TextField}
-                        
+
                         name="firstName"
                         label="First Name"
                         variant="standard"
@@ -127,7 +144,7 @@ const SignUp = () => {
                     <Grid item xs={12} md={6}>
                       <Field
                         as={TextField}
-                        
+
                         name="lastName"
                         label="Last Name"
                         variant="standard"
@@ -145,7 +162,7 @@ const SignUp = () => {
                     <Grid item xs={12} md={6}>
                       <Field
                         as={TextField}
-                        
+
                         name="email"
                         label="Email"
                         variant="standard"
@@ -163,7 +180,7 @@ const SignUp = () => {
                     <Grid item xs={12} md={6}>
                       <Field
                         as={TextField}
-                        
+
                         name="phone"
                         label="Phone"
                         variant="standard"
@@ -181,7 +198,7 @@ const SignUp = () => {
                     <Grid item xs={12} md={6}>
                       <Field
                         as={TextField}
-                        
+
                         type={"password"}
                         name="password"
                         label="Password"
@@ -201,7 +218,7 @@ const SignUp = () => {
                       <Field
                         as={TextField}
                         type={"password"}
-                        
+
                         name="confirmPassword"
                         label="Confirm Password"
                         variant="standard"

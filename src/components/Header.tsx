@@ -18,7 +18,7 @@ const Header = () => {
   const navigate = useNavigate();
   const cartSize = useSelector((state: any) => state.cart_reducer?.cartSize);
 
-  
+
   const goToCart = () => {
     navigate("/cart");
   };
