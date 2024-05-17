@@ -1,14 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./Starters.css";
 import { useEffect } from "react";
-import { AddUserCart, DeleteItem, DeleteItembyId, GetNonVegItems, GetVegItems } from "../Redux/Action/CartAction";
-import { ADD_ITEM, REMOVE_ITEM } from "../Redux/Slice/CartSliceReducer";
+import { AddUserCart, DeleteItembyId, GetNonVegItems, GetVegItems } from "../Redux/Action/CartAction";
 
 const Starters = () => {
   const dispatch = useDispatch();
   const vegStarters = useSelector((state: any) => state.veg_starters_reducer);
   const nonVegStarters = useSelector((state: any) => state.non_veg_starters_reducer);
-
   const cartData = useSelector((state: any) => state.cart_reducer.cartData);
   const getVegItems = () => {
     dispatch(GetVegItems());

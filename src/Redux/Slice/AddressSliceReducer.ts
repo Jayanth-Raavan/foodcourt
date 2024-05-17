@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { AddAddress, GetAddress } from "../Action/AddressAction";
+import { AddAddress, GetAddress, GetAddressById } from "../Action/AddressAction";
 
 const initialState = {
   isLoading: false,
@@ -30,6 +30,18 @@ export const AddressSilceReducer = createSlice({
             state.address = action?.payload;
         });
         builder.addCase(GetAddress.rejected, (state:any)=>{
+            state.isLoading = false;
+            state.isError = true;
+        });
+        //============ [GET ADDRESS BY ADDRESS ID] ==============
+        builder.addCase(GetAddressById.pending, (state:any)=>{
+            state.isLoading = true;
+        });
+        builder.addCase(GetAddressById.fulfilled, (state:any,action:any)=>{
+            state.isLoading = false;
+            state.address = action?.payload;
+        });
+        builder.addCase(GetAddressById.rejected, (state:any)=>{
             state.isLoading = false;
             state.isError = true;
         });

@@ -4,12 +4,12 @@ import "./Cart.css";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
 import { AddUserCart, DeleteItem, DeleteItembyId } from "../Redux/Action/CartAction";
-import { DELETE_ITEM, REMOVE_ITEM } from "../Redux/Slice/CartSliceReducer";
 const Cart = () => {
   const cartItems = useSelector((state: any) => state?.cart_reducer?.cartData);
   const cartData = useSelector((state: any) => state.cart_reducer.cartData);
   const cartSize = useSelector((state: any) => state.cart_reducer?.cartSize);
   const location = useLocation();
+  console.log("cartItems___", cartItems)
   const [showAddress, setShowAddress] = useState<boolean>(false);
   const isEmpty: any[] = [];
   const navigate = useNavigate();

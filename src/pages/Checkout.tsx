@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
@@ -8,38 +9,60 @@ import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { Avatar, Badge, Card, CardContent, Divider, FormControl, FormControlLabel, FormLabel, Grid, InputLabel, List, ListItem, ListItemAvatar, ListItemText, MenuItem, OutlinedInput, Radio, RadioGroup, Select, TextField } from '@mui/material';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import GPay from "../assets/google-pay-icon.webp";
 import Phonepe from "../assets/phonepe-logo-icon.webp";
 import Paytm from "../assets/paytm-icon.webp";
 import Bhim from "../assets/bhim.png";
 import { useLocation, useNavigate } from 'react-router';
+import { EmptyCart } from '../Redux/Action/CartAction';
+import { AddOrder, UpdateOrder } from '../Redux/Action/OrdersAction';
 
 
 export default function VerticalLinearStepper() {
+    const dispatch = useDispatch();
     const address: any = localStorage.getItem("Address");
     const userAddress = address !== [] as any ? JSON.parse(address) : null;
-    const [activeStep, setActiveStep] = React.useState(0);
-    const [index, setIndex] = React.useState(0);
+    const userData: any = localStorage.getItem("User");
+    const user = JSON.parse(userData);
+    const [activeStep, setActiveStep] = useState(0);
+    const [index, setIndex] = useState(0);
     const cartItems = useSelector((state: any) => state?.cart_reducer?.cartData);
+    const [currentOrder, setCurrentOrder] = useState<any>()
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
         setIndex((prevActiveStep) => prevActiveStep + 1);
     };
+    const updateOrder = async () => {
+        let payload = {
+            ...cartItems,
+            userID: user?.id,
+            addressId: value,
+            totalPrice: totalPrice,
+            isPaymentCompleted: false,
+            isOrderCompleted: false
+        }
+        const updatedOrder = await dispatch(AddOrder(payload));
+        console.log("UpdatedOrder", updatedOrder)
+        setCurrentOrder(updatedOrder?.payload);
+        setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        setIndex((prevActiveStep) => prevActiveStep + 1);
+    }
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
-    const [value, setValue] = React.useState<any>("");
-    const [payValue, setPayValue] = React.useState<any>("");
-    const [showUPI, setShowUPI] = React.useState<any>(false);
-    const [showUpiField, setShowUpiField] = React.useState<any>(false);
-    const [showNetBanking, setShowNetbanking] = React.useState<any>(false);
-    const [showCOD, setShowCOD] = React.useState<any>(false);
-    const [proceed, setProceed] = React.useState<boolean>(false);
+    const [value, setValue] = useState<any>("");
+    const [payValue, setPayValue] = useState<any>("");
+    const [showUPI, setShowUPI] = useState<any>(false);
+    const [showUpiField, setShowUpiField] = useState<any>(false);
+    const [showNetBanking, setShowNetbanking] = useState<any>(false);
+    const [showCOD, setShowCOD] =useState<any>(false);
+    const [proceed, setProceed] = useState<boolean>(false);
     const location = useLocation();
-    const [totalPrice, setTotalPrice] = React.useState(0)
+    const [totalPrice, setTotalPrice] = useState(0)
     const navigate = useNavigate();
     const handleAddress = (event: React.ChangeEvent<HTMLInputElement>) => {
+        console.log(event?.target?.value)
         setValue((event.target as HTMLInputElement)?.value);
     }
     const handlePaymentOptions = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -87,9 +110,9 @@ export default function VerticalLinearStepper() {
         'UNION BANK',
         'CANARA BANK',
     ];
-    const [selectedBank, setSelectedBank] = React.useState();
-    const [validateUPI, setValidateUPI] = React.useState(false);
-    const [showValidateBtn, setShowValidateBtn] = React.useState(false);
+    const [selectedBank, setSelectedBank] = useState();
+    const [validateUPI, setValidateUPI] = useState(false);
+    const [showValidateBtn, setShowValidateBtn] = useState(false);
 
     const handleBanks = (event: any) => {
         setSelectedBank(event?.target?.value);
@@ -116,10 +139,18 @@ export default function VerticalLinearStepper() {
     }, [validateUPI, location]);
 
     const proceedPayment = () => {
-        navigate("/payment", { state: { totalPrice } })
-
+        const date = new Date();
+        let payload = {
+            ...currentOrder,
+            isPaymentCompleted: true,
+            isOrderCompleted: false,
+            orderCreatedDate: date
+        }
+        navigate("/payment", { state: { totalPrice } });
+        dispatch(UpdateOrder(payload))
+        dispatch(EmptyCart(user?.id));
     }
-    const addAddress =()=>{
+    const addAddress = () => {
         navigate("/address_book");
     }
     return (
@@ -169,7 +200,7 @@ export default function VerticalLinearStepper() {
                                                     </Box>
 
                                                     <FormControlLabel
-                                                        value={index.toString()} // Convert index to string since value must be a string
+                                                        value={address?.id} // Convert index to string since value must be a string
                                                         control={<Radio />}
                                                         label={`${address.fullName}, ${address.flatNo}, ${address.street}, ${address.city}, ${address.state}, ${address.pinCode}, ${address.country}`}
                                                     />
@@ -184,10 +215,10 @@ export default function VerticalLinearStepper() {
                                             (
                                                 <Button
                                                     variant="contained"
-                                                    onClick={handleNext}
+                                                    onClick={updateOrder}
                                                     sx={{ mt: 1, mr: 1 }}
                                                     color={"warning"}
-                                                    disabled={value === 0 ? false : true}
+                                                    disabled={value ? false : true}
                                                 >
                                                     DELIVER HERE
                                                 </Button>
@@ -350,7 +381,7 @@ export default function VerticalLinearStepper() {
                                         <FormControlLabel value="cashOnDelivery" control={<Radio />} label="Cash On Delivery" />
                                         {showCOD && (
                                             <>
-                                                <Button variant="contained" color='primary' size='large' fullWidth sx={{ mt: 2 }} onClick={proceedPayment}>Proceed to payment</Button>
+                                                <Button variant="contained" color='primary' size='large' fullWidth sx={{ mt: 2 }} onClick={proceedPayment}>Place Order</Button>
 
                                             </>
                                         )}

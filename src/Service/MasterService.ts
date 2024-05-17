@@ -14,7 +14,7 @@ export const Post: any = async (endpoint: any, payload: any) => {
   return res?.data;
 };
 export const Put: any = async (endpoint: any, payload: any) => {
-  const res = await axios.put(baseUrl + endpoint + `/${payload.id}`);
+  const res = await axios.put(baseUrl + endpoint + `/${payload.id}`, payload);
   return res.data;
 };
 //if cartData --> deletes item by itemId (can be multiple)
@@ -62,5 +62,19 @@ export const Delete1Item: any = async (endpoint: any, item: any) => {
       axios.delete(baseUrl + endpoint + `/${item?.id}`)
     );
     return res;
+  }
+};
+
+export const _EmptyCart: any = async (endpoint: any, userId: any) => {
+  try {
+    const res = await axios.get(baseUrl + endpoint + `?userId=${userId}`);
+    if (res?.data?.length > 0) {
+      res?.data?.map(
+        async (x: any) => await axios.delete(baseUrl + endpoint + `/${x?.id}`)
+      );
+    }
+    return null;
+  } catch (error) {
+    return error;
   }
 };

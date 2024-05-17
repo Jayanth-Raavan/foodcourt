@@ -333,45 +333,32 @@
   ],
   "userCart": [
     {
-      "id": "a57e",
-      "itemName": "Hara bhara kabab",
-      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/11/hara-bhara-kabab-recipe-13.jpg",
-      "price": 120,
-      "itemId": "819a",
-      "userId": "2a26"
-    },
-    {
-      "id": "8f18",
-      "itemName": "Veg Kofta",
-      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/10/vegetable-kofta-recipe-6.jpg",
-      "price": 130,
-      "itemId": "014b",
-      "userId": "2a26"
-    },
-    {
       "id": "9391",
       "itemName": "Paneer Manchurian Dry",
       "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/09/paneer-manchurian-dry-recipe-11.jpg",
       "price": 150,
       "itemId": "5a4b",
       "userId": "2a26"
-    },
+    }
+  ],
+  "orders_history": [
     {
-      "id": "536b",
-      "itemName": "Veg Momos",
-      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/04/veg-momos-recipe-13.jpg",
-      "price": 179,
-      "itemId": "6efc",
-      "userId": "fe3e"
-    },
-    {
-      "id": "536b",
-      "itemName": "Veg Momos",
-      "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/04/veg-momos-recipe-13.jpg",
-      "price": 179,
-      "itemId": "6efc",
-      "userId": "fe3e",
-      "cartSize": 1
+      "id": "393d",
+      "Veg Kofta": {
+        "id": "5dfe",
+        "itemName": "Veg Kofta",
+        "imgURL": "https://www.spiceupthecurry.com/wp-content/uploads/2017/10/vegetable-kofta-recipe-6.jpg",
+        "price": 130,
+        "itemId": "014b",
+        "userId": "fe3e",
+        "cartSize": 1
+      },
+      "userID": "fe3e",
+      "addressId": "f7e2",
+      "totalPrice": 130,
+      "isPaymentCompleted": true,
+      "isOrderCompleted": false,
+      "orderCreatedDate": "2024-05-17T13:58:56.749Z"
     }
   ]
 }

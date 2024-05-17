@@ -6,7 +6,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LogoutIcon from '@mui/icons-material/Logout';
 import styled from "@emotion/styled";
 import React from "react";
-import { pink } from "@mui/material/colors";
+import ManageHistoryIcon from '@mui/icons-material/ManageHistory';
 
 const StyledBadge = styled(Badge)<BadgeProps>(({ theme }: any) => ({
   '& .MuiBadge-badge': {
@@ -34,6 +34,9 @@ const Header = () => {
     localStorage.removeItem("User");
     localStorage.removeItem("Address");
     navigate("/login");
+  }
+  const manageOrders = () => {
+    navigate("/manage-orders")
   }
   const user: any = localStorage.getItem("User");
   const userName = JSON.parse(user)?.firstName;
@@ -101,6 +104,9 @@ const Header = () => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
+                <MenuItem onClick={manageOrders} style={{ padding: '6px 30px' }}>
+                  <Typography textAlign="center"><ManageHistoryIcon /> Manage Orders</Typography>
+                </MenuItem>
                 <MenuItem onClick={handleLogOut} style={{ padding: '6px 30px' }}>
                   <Typography textAlign="center"><LogoutIcon /> Logout</Typography>
                 </MenuItem>

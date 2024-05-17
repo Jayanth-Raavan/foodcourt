@@ -25,10 +25,9 @@ const Sidebar = () => {
                 <li className="list-group-item bg-transparent">
                     <Link className='text-decoration-none text-white' to={'/starters'} onClick={hideMenu}>Starters</Link>
                 </li>
-
-                <li className="list-group-item bg-transparent">Soups</li>
+                {/* <li className="list-group-item bg-transparent">Soups</li>
                 <li className="list-group-item bg-transparent">Biryani</li>
-                <li className="list-group-item bg-transparent">Biryani</li>
+                <li className="list-group-item bg-transparent">Biryani</li> */}
             </ul>
         </div>
     );

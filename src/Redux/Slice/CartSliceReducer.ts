@@ -1,5 +1,12 @@
-import { createSlice, current } from "@reduxjs/toolkit";
-import { AddUserCart, DeleteItem, DeleteItembyId, GetUserCart } from "../Action/CartAction";
+import { createSlice } from "@reduxjs/toolkit";
+import {
+  AddUserCart,
+  DeleteItem,
+  DeleteItembyId,
+  EmptyCart,
+  GetUserCart,
+  UpdateUserCart,
+} from "../Action/CartAction";
 
 interface CartItem {
   itemName: string;
@@ -16,6 +23,7 @@ interface CartState {
   isError: boolean;
   cartSize: number;
   userCart: any;
+  addressId: any
 }
 
 const initialState: CartState = {
@@ -24,6 +32,7 @@ const initialState: CartState = {
   isError: false,
   cartSize: 0,
   userCart: null,
+  addressId: null
 };
 
 export const CartSliceReducer = createSlice({
@@ -59,6 +68,14 @@ export const CartSliceReducer = createSlice({
         delete state.cartData[itemName];
       }
     },
+    EMPTY_CART: (state) => {
+      return {
+        ...state,
+        cartData: {},
+        cartSize: 0,
+        userCart: null,
+      };
+    },
   },
   extraReducers: (builder: any) => {
     // ============= [ ADD TO CART ]================
@@ -80,12 +97,21 @@ export const CartSliceReducer = createSlice({
     builder.addCase(AddUserCart.rejected, (state: any) => {
       state.isError = true;
     });
+    // ============= [ UPDATE USER CART ] ==================
+    builder.addCase(UpdateUserCart.pending, (state: any) => {
+      state.isLoading = true;
+    });
+    builder.addCase(UpdateUserCart.fulfilled, (state: any, action: any) => {
+      console.log("ACTIONS__________", action)
+    });
+    builder.addCase(UpdateUserCart.rejected, (state: any) => {
+      state.isError = true;
+    });
     // ============= [ GET CART ]================
     builder.addCase(GetUserCart.pending, (state: any) => {
       state.isLoading = true;
     });
     builder.addCase(GetUserCart.fulfilled, (state: any, action: any) => {
-
       if (action?.payload?.length > 0) {
         const data = action?.payload;
         data?.map((item: any) => {
@@ -136,9 +162,22 @@ export const CartSliceReducer = createSlice({
     builder.addCase(DeleteItem.rejected, (state: any) => {
       state.isError = true;
     });
+    // ================[ EMPTY CART ] ====================
+    builder.addCase(EmptyCart.pending, (state: any) => {
+      state.isLoading = true;
+    });
+    builder.addCase(EmptyCart.fulfilled, (state: any) => {
+      state.cartData={};
+      state.cartSize=0;
+      state.userCart=null;
+    });
+    builder.addCase(EmptyCart.rejected, (state: any) => {
+      state.isError = true;
+    });
   },
 });
 
-export const { ADD_ITEM, REMOVE_ITEM, DELETE_ITEM } = CartSliceReducer.actions;
+export const { ADD_ITEM, REMOVE_ITEM, DELETE_ITEM, EMPTY_CART } =
+  CartSliceReducer.actions;
 
 export default CartSliceReducer.reducer;

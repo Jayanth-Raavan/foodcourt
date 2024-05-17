@@ -4,6 +4,7 @@ import NonVegStartersSliceReducer from './Slice/NonVegStartersSliceReducer'
 import AuthSliceReducer from './Slice/AuthSliceReducer'
 import AddressSliceReducer from './Slice/AddressSliceReducer'
 import CartSliceReducer from './Slice/CartSliceReducer'
+import OrdersSliceReducer from './Slice/OrdersSliceReducer'
 
 export const Store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export const Store = configureStore({
     veg_starters_reducer: VegStartersSliceReducer,
     non_veg_starters_reducer: NonVegStartersSliceReducer,
     auth_slice_reducer: AuthSliceReducer,
-    address_slice_reducer: AddressSliceReducer
+    address_slice_reducer: AddressSliceReducer,
+    orders_slice_reducer: OrdersSliceReducer
   },
 })

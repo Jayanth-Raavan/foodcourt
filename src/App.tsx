@@ -17,6 +17,7 @@ import PaymentPage from "./pages/PaymentPage";
 import { useDispatch } from "react-redux";
 import { GetAddress } from "./Redux/Action/AddressAction";
 import { GetUserCart } from "./Redux/Action/CartAction";
+import ManageOrders from "./pages/ManageOrders";
 
 function App() {
   const location = useLocation();
@@ -56,6 +57,8 @@ function App() {
           <Route path="address_book" element={<AddressForm />}> </Route>
           <Route path="checkout" element={<Checkout />}> </Route>
           <Route path="payment" element={<PaymentPage />}> </Route>
+          <Route path="manage-orders" element={<ManageOrders />}> </Route>
+
         </Route>
         <Route element={<Public />}>
           <Route path="/login" element={<SignIn />}></Route>
